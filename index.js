@@ -3,77 +3,77 @@ define(function (require) {
 	require('bootstrap');
 	require('fuelux');
 
-	// initialize
-	function myTreeInit() {
-		$('#myTree').tree({
-			dataSource: function (parentData, callback) {
-				callback({
-					data: [
-						{
-							"name": "Ascending and Descending",
-							"type": "folder",
-							"attr": {
-								"id": "folder1"
-							}
-						},
-						{
-							"name": "Sky and Water I (with custom icon)",
-							"type": "item",
-							"attr": {
-								"id": "item1",
-								"data-icon": "glyphicon glyphicon-file"
-							}
-						},
-						{
-							"name": "Drawing Hands",
-							"type": "folder",
-							"attr": {
-								"id": "folder2"
-							}
-						},
-						{
-							"name": "Waterfall",
-							"type": "item",
-							"attr": {
-								"id": "item2"
-							}
-						},
-						{
-							"name": "Belvedere",
-							"type": "folder",
-							"attr": {
-								"id": "folder3"
-							}
-						},
-						{
-							"name": "Relativity (with custom icon)",
-							"type": "item",
-							"attr": {
-								"id": "item3",
-								"data-icon": "glyphicon glyphicon-picture"
-							}
-						},
-						{
-							"name": "House of Stairs",
-							"type": "folder",
-							"attr": {
-								"id": "folder4"
-							}
-						},
-						{
-							"name": "Convex and Concave",
-							"type": "item",
-							"attr": {
-								"id": "item4"
-							}
-						}
-					]
-				});
-			}
-		});
-	}
-	myTreeInit();
 
+	//FUELUX V3 TREE INSTANTIATED
+	$('#myTree').tree({
+		dataSource: function (parentData, callback) {
+			callback({
+				data: [
+					{
+						"name": "Ascending and Descending",
+						"type": "folder",
+						"attr": {
+							"id": "folder1"
+						}
+					},
+					{
+						"name": "Sky and Water I (with custom icon)",
+						"type": "item",
+						"attr": {
+							"id": "item1",
+							"data-icon": "glyphicon glyphicon-file"
+						}
+					},
+					{
+						"name": "Drawing Hands",
+						"type": "folder",
+						"attr": {
+							"id": "folder2"
+						}
+					},
+					{
+						"name": "Waterfall",
+						"type": "item",
+						"attr": {
+							"id": "item2"
+						}
+					},
+					{
+						"name": "Belvedere",
+						"type": "folder",
+						"attr": {
+							"id": "folder3"
+						}
+					},
+					{
+						"name": "Relativity (with custom icon)",
+						"type": "item",
+						"attr": {
+							"id": "item3",
+							"data-icon": "glyphicon glyphicon-picture"
+						}
+					},
+					{
+						"name": "House of Stairs",
+						"type": "folder",
+						"attr": {
+							"id": "folder4"
+						}
+					},
+					{
+						"name": "Convex and Concave",
+						"type": "item",
+						"attr": {
+							"id": "item4"
+						}
+					}
+				]
+			});
+		}
+	});
+
+	//FUELUX V2 TREE INSTANTIATED
+	//
 	$('#ex-tree').tree.noConflict();
 	$('#ex-tree').tree({
 		dataSource: {
