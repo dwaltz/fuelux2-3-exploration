@@ -1,0 +1,28 @@
+{
+  "name": "fuel2&3-mixed",
+  "title": "Fuelux v2 and v3 cohabitation",
+  "version": "0.1.0",
+  "description": "Provides an example of using a fuel2 control next to a fuel3 control",
+  "homepage": "https://github.com/ExactTarget/fuelux",
+  "author": {
+    "name": "David Waltz",
+    "email": "dwaltz@exacttarget.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+    "fuelux",
+    "fuel ux",
+    "bootstrap"
+  ],
+  "private": false
+}

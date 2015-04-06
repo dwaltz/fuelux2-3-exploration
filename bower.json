@@ -1,0 +1,46 @@
+{
+  "name": "fuel2&3-mixed",
+  "description": "Fuelux v2 and v3 cohabitation",
+  "version": "0.1.0",
+  "keywords": [
+    "application",
+    "bootstrap",
+    "controls",
+    "css",
+    "exacttarget",
+    "front-end",
+    "fuelux",
+    "fuel ux",
+    "js",
+    "salesforce",
+    "user interface",
+    "web"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "requirejs": "2.x",
+    "bootstrap": "3.x",
+	"bootstrap-2.3.2": "bootstrap#2.3.2",
+    "moment": "2.x",
+	"fuelux": "3.x",
+	"fuelux-2.6.4" : "fuelux#2.6.4"
+  },
+  "ignore": [
+    "**/.*",
+    "_*",
+    "*.yml",
+    "BACKLOG.md",
+    "data.js",
+    "dev",
+    "devserver.js",
+    "dist/fuelux.zip",
+    "Gruntfile.js",
+    "index.css",
+    "index.html",
+    "index.js",
+    "node_modules",
+    "Procfile",
+    "test"
+  ],
+  "license": "BSD-3-Clause"
+}
