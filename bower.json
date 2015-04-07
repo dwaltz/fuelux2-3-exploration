@@ -20,10 +20,11 @@
     "jquery": "latest",
     "requirejs": "2.x",
     "bootstrap": "3.x",
-	"bootstrap-2.3.2": "bootstrap#2.3.2",
+    "bootstrap-2.3.2": "bootstrap#2.3.2",
     "moment": "2.x",
-	"fuelux": "3.x",
-	"fuelux-2.6.4" : "fuelux#2.6.4"
+    "fuelux": "3.x",
+    "fuelux-2.6.4": "fuelux#2.6.4",
+    "tree": "https://raw.githubusercontent.com/dwaltz/fuelux/prototype-hack/js/tree.js"
   },
   "ignore": [
     "**/.*",

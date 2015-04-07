@@ -1,0 +1,14 @@
+{
+  "name": "tree",
+  "_cacheHeaders": {
+    "ETag": "\"30b32bc7d91080c103c3a5eb7301803dca8c213b\"",
+    "Content-Length": "15488",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:30b32bc7d",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/dwaltz/fuelux/prototype-hack/js/tree.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/dwaltz/fuelux/prototype-hack/js/tree.js",
+  "_direct": true
+}

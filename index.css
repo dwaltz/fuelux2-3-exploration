@@ -1,0 +1,24 @@
+header.navbar {
+	margin-bottom: 0;
+}
+
+footer {
+	padding: 20px;
+	border-top: 1px solid #ccc;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.tt-banner {
+	background-color: #293f54;
+	color: #fff;
+}
+
+.tt-banner h1 {
+	font-size: 50px;
+}
+
+.tt-banner p {
+	font-size: 20px;
+}
+
