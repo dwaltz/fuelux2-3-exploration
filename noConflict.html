@@ -5,6 +5,11 @@
 	<title>Fuel UX 3</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!--
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="bower_components/fuelux-2.6.4/dist/css/fuelux.css" rel="stylesheet" type="text/css">
+	-->
+
 	<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="bower_components/fuelux/dist/css/fuelux.css" rel="stylesheet" type="text/css">
 
@@ -26,18 +31,24 @@
 					jquery: 'bower_components/jquery/jquery',
 					underscore: 'bower_components/underscore/underscore',
 					bootstrap: 'bower_components/bootstrap/dist/js/bootstrap',
-					moment: 'bower_components/moment/moment',
-
 					fuelux: 'bower_components/fuelux/dist/js/fuelux',
-					fuelux2: 'bower_components/fuelux-2.6.4/dist/'
+
+					bootstrap2: 'bower_components/bootstrap-2.3-2/js/',
+					fuelux2: 'bower_components/fuelux-2.6.4/dist/',
+					moment: 'bower_components/moment/moment'
 				},
 				shim: {
 					'bootstrap': {
 						deps: ['jquery'],
 						exports: 'bootstrap'
 					},
+
+					'fuelux2/loader': {
+						deps: ['jquery']
+					},
+
 					'fuelux': {
-						deps: ['fuelux2/tree','bootstrap']
+						deps: ['fuelux2/loader']
 					}
 				}
 			});
@@ -143,6 +154,353 @@
 					</button>
 				</li>
 			</ul>
+
+
+			<h4 style="margin-top:30px;">Fuel UX 3 Checkbox</h4>
+			<div class="checkbox" id="myCheckbox">
+				<label class="checkbox-custom" data-initialize="checkbox">
+					<input class="sr-only" type="checkbox" value="">
+					<span class="checkbox-label">Custom checkbox unchecked on page load</span>
+				</label>
+			</div>
+
+			<h4>Fuel UX 2 Checkbox</h4>
+			<label id="checkbox2" class="checkbox checkbox-custom"><input type="checkbox"><i class="checkbox"></i>Item One</label>
+
+			<h4 style="margin-top:30px;">Fuel UX 3 Combobox</h4>
+			<div id="combobox3" class="input-group input-append combobox">
+				<input type="text" class="form-control">
+				<div class="input-group-btn dropdown">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li data-value="1"><a href="#">One</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<h4>Fuel UX 2 Combobox</h4>
+			<div id="combobox2" class="input-append dropdown combobox">
+				<input class="span2" type="text"><button type="button" class="btn" data-toggle="dropdown"><i class="caret"></i></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Item One</a></li>
+					<li><a href="#">Item Two</a></li>
+					<li><a href="#">Item Three</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Item After Divider</a></li>
+				</ul>
+			</div>
+
+			<h4 style="margin-top:30px;">Fuel UX 3 Radio</h4>
+			<div class="radio" data-initialize="radio" id="myCustomRadio">
+				<label class="radio-custom">
+					<input class="sr-only" name="radioEx1" type="radio" value="option1">
+					Browser-independent radio unchecked on page load
+				</label>
+			</div>
+
+			<div class="radio checked" data-initialize="radio" id="myCustomRadio2">
+				<label class="radio-custom">
+					<input class="sr-only" checked="checked" name="radioEx1" type="radio" value="option2">
+					Browser-independent radio checked on page load
+				</label>
+			</div>
+
+			<h4>Fuel UX 2 Radio</h4>
+			<label class="radio radio-custom"><input type="radio"><i class="radio"></i>Item One</label>
+			<label class="radio radio-custom"><input type="radio"><i class="radio"></i>Item Two</label>
+
+			<h4 style="margin-top:30px;">Fuel UX 3 SpinBox</h4>
+			<div class="spinbox" data-initialize="spinbox" id="mySpinbox">
+				<input type="text" class="form-control input-mini spinbox-input">
+				<div class="spinbox-buttons btn-group btn-group-vertical">
+					<button type="button" class="btn btn-default spinbox-up btn-xs">
+						<span class="glyphicon glyphicon-chevron-up"></span><span class="sr-only">Increase</span>
+					</button>
+					<button type="button" class="btn btn-default spinbox-down btn-xs">
+						<span class="glyphicon glyphicon-chevron-down"></span><span class="sr-only">Decrease</span>
+					</button>
+				</div>
+			</div>
+
+			<h4>Fuel UX 2 Spinner</h4>
+			<div id="MySpinner" class="spinner">
+				<input type="text" class="input-mini spinner-input">
+				<div class="spinner-buttons	btn-group btn-group-vertical">
+					<button type="button" class="btn spinner-up">
+						<i class="icon-chevron-up"></i>
+					</button>
+					<button type="button" class="btn spinner-down">
+						<i class="icon-chevron-down"></i>
+					</button>
+				</div>
+			</div>
+
+			<h4 style="margin-top:30px;">Fuel UX 3 Wizard</h4>
+			<div class="wizard" data-initialize="wizard" id="wizardIllustration">
+				<ul class="steps" style="margin-left: 0">
+					<li data-step="1" data-name="campaign" class="active"><span class="badge badge-info">1</span>Campaign<span class="chevron"></span></li>
+					<li data-step="2"><span class="badge">2</span>Recipients<span class="chevron"></span></li>
+					<li data-step="3" data-name="template"><span class="badge">3</span>Template<span class="chevron"></span></li>
+				</ul>
+				<div class="actions">
+					<button type="button" class="btn btn-default btn-prev" disabled="disabled"><span class="glyphicon glyphicon-arrow-left"></span>Prev</button>
+					<button type="button" class="btn btn-default btn-next" data-last="Complete">Next<span class="glyphicon glyphicon-arrow-right"></span></button>
+				</div>
+				<div class="step-content">
+					<div class="step-pane sample-pane alert active" data-step="1">
+						<h4>Setup Campaign</h4>
+						<p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Beetroot water spinach okra water chestnut ricebean pea catsear courgette.</p>
+					</div>
+					<div class="step-pane sample-pane bg-info alert" data-step="2">
+						<h4>Choose Recipients</h4>
+						<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard. </p>
+					</div>
+					<div class="step-pane sample-pane bg-danger alert" data-step="3">
+						<h4>Design Template</h4>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jÃ­cama salsify. </p>
+					</div>
+				</div>
+
+			</div>
+
+			<h4>Fuel UX 2 Wizard</h4>
+			<div id="MyWizard" class="wizard">
+				<ul class="steps">
+					<li data-target="#step1" class="active"><span class="badge badge-info">1</span>Step 1<span class="chevron"></span></li>
+					<li data-target="#step2"><span class="badge">2</span>Step 2<span class="chevron"></span></li>
+					<li data-target="#step3"><span class="badge">3</span>Step 3<span class="chevron"></span></li>
+					<li data-target="#step4"><span class="badge">4</span>Step 4<span class="chevron"></span></li>
+					<li data-target="#step5"><span class="badge">5</span>Step 5<span class="chevron"></span></li>
+				</ul>
+				<div class="actions">
+					<button type="button" class="btn btn-mini btn-prev"> <i class="icon-arrow-left"></i>Prev</button>
+					<button type="button" class="btn btn-mini btn-next" data-last="Finish">Next<i class="icon-arrow-right"></i></button>
+				</div>
+			</div>
+			<div class="step-content">
+				<div class="step-pane active" id="step1">This is step 1</div>
+				<div class="step-pane" id="step2">This is step 2</div>
+				<div class="step-pane" id="step3">This is step 3</div>
+				<div class="step-pane" id="step4">This is step 4</div>
+				<div class="step-pane" id="step5">This is step 5</div>
+			</div>
+
+			<h4 style="margin-top:30px;">Fuel UX 3 Pillbox</h4>
+			<div class="pillbox" data-initialize="pillbox" id="myPillbox">
+				<ul class="clearfix pill-group">
+					<li class="btn btn-default pill" data-value="foo">
+					  <span>Item Title</span>
+				      <span class="glyphicon glyphicon-close">
+				        <span class="sr-only">Remove</span>
+				      </span>
+					</li>
+					<li class="pillbox-input-wrap btn-group">
+						<a class="pillbox-more">and <span class="pillbox-more-count"></span> more...</a>
+						<input type="text" class="form-control dropdown-toggle pillbox-add-item" placeholder="add item">
+						<button type="button" class="dropdown-toggle sr-only">
+							<span class="caret"></span>
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<ul class="suggest dropdown-menu" role="menu" data-toggle="dropdown" data-flip="auto"></ul>
+					</li>
+				</ul>
+			</div>
+
+			<h4>Fuel UX 2 Pillbox</h4>
+			<div id="MyPillbox2" class="pillbox">
+				<ul>
+					<li data-value="foo">Item 1</li>
+					<li class="status-success">Item 2</li>
+					<li class="status-warning">Item 3</li>
+					<li class="status-important">Item 4</li>
+					<li class="status-info">Item 5</li>
+					<li class="status-success">Item 6</li>
+					<li>Item 7</li>
+				</ul>
+			</div>
+
+			<h4 style="margin-top:30px;">Fuel UX 3 Repeater</h4>
+			<div class="repeater" data-staticheight="400" id="myRepeater">
+				<div class="repeater-header">
+					<div class="repeater-header-left">
+						<span class="repeater-title">Awesome Repeater</span>
+						<div class="repeater-search">
+							<div class="search input-group">
+								<input type="search" class="form-control" placeholder="Search" />
+							<span class="input-group-btn">
+							<button class="btn btn-default" type="button">
+								<span class="glyphicon glyphicon-search"></span>
+								<span class="sr-only">Search</span>
+							</button>
+							</span>
+							</div>
+						</div>
+					</div>
+					<div class="repeater-header-right">
+						<div class="btn-group selectlist repeater-filters" data-resize="auto">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span class="selected-label">&nbsp;</span>
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Filters</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li data-value="all" data-selected="true"><a href="#">All</a>
+								</li>
+								<li data-value="some"><a href="#">Some</a>
+								</li>
+								<li data-value="others"><a href="#">Others</a>
+								</li>
+							</ul>
+							<input class="hidden hidden-field" name="filterSelection" readonly="readonly" aria-hidden="true" type="text" />
+						</div>
+						<div class="btn-group repeater-views" data-toggle="buttons">
+							<label class="btn btn-default active">
+								<input name="repeaterViews" type="radio" value="list"><span class="glyphicon glyphicon-list"></span>
+							</label>
+							<label class="btn btn-default">
+								<input name="repeaterViews" type="radio" value="thumbnail"><span class="glyphicon glyphicon-th"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="repeater-viewport">
+					<div class="repeater-canvas"></div>
+					<div class="loader repeater-loader"></div>
+				</div>
+				<div class="repeater-footer">
+					<div class="repeater-footer-left">
+						<div class="repeater-itemization">
+							<span><span class="repeater-start"></span> - <span class="repeater-end"></span> of <span class="repeater-count"></span> items</span>
+							<div class="btn-group selectlist" data-resize="auto">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									<span class="selected-label">&nbsp;</span>
+									<span class="caret"></span>
+									<span class="sr-only">Toggle Dropdown</span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li data-value="5"><a href="#">5</a>
+									</li>
+									<li data-value="10" data-selected="true"><a href="#">10</a>
+									</li>
+									<li data-value="20"><a href="#">20</a>
+									</li>
+									<li data-value="50"><a href="#">50</a>
+									</li>
+								</ul>
+								<input class="hidden hidden-field" name="itemsPerPage" readonly="readonly" aria-hidden="true" type="text" />
+							</div>
+							<span>Per Page</span>
+						</div>
+					</div>
+					<div class="repeater-footer-right">
+						<div class="repeater-pagination">
+							<button type="button" class="btn btn-default btn-sm repeater-prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="sr-only">Previous Page</span>
+							</button>
+							<label id="myPageLabel" class="page-label">Page</label>
+							<div class="repeater-primaryPaging active">
+								<div class="input-group input-append dropdown combobox">
+									<input type="text" class="form-control" aria-labelledby="myPageLabel">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											<span class="caret"></span>
+											<span class="sr-only">Toggle Dropdown</span>
+										</button>
+										<ul class="dropdown-menu dropdown-menu-right"></ul>
+									</div>
+								</div>
+							</div>
+							<input type="text" class="form-control repeater-secondaryPaging" aria-labelledby="myPageLabel">
+							<span>of <span class="repeater-pages"></span></span>
+							<button type="button" class="btn btn-default btn-sm repeater-next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="sr-only">Next Page</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h4 style="margin-top:30px;">Fuel UX 2 Datagrid</h4>
+			<div style="height:660px;width:100%;margin-bottom:50px;">
+				<table id="MySelectStretchGrid" class="table table-bordered datagrid">
+
+					<thead>
+					<tr>
+						<th>
+							<span class="datagrid-header-title">Geographic Data Sample</span>
+
+							<div class="datagrid-header-left">
+								<div class="input-append search datagrid-search">
+									<input type="text" class="input-medium" placeholder="Search">
+									<button class="btn"><i class="icon-search"></i></button>
+								</div>
+							</div>
+							<div class="datagrid-header-right">
+								<div class="select filter" data-resize="auto">
+									<button data-toggle="dropdown" class="btn dropdown-toggle">
+										<span class="dropdown-label"></span>
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li data-value="all" data-selected="true"><a href="#">All</a></li>
+										<li data-value="lt5m"><a href="#">Population &lt; 5M</a></li>
+										<li data-value="gte5m"><a href="#">Population &gt;= 5M</a></li>
+									</ul>
+								</div>
+							</div>
+						</th>
+					</tr>
+					</thead>
+
+					<tfoot>
+					<tr>
+						<th>
+							<div class="datagrid-footer-left" style="display:none;">
+								<div class="grid-controls">
+								<span>
+									<span class="grid-start"></span> -
+									<span class="grid-end"></span> of
+									<span class="grid-count"></span>
+								</span>
+									<div class="select grid-pagesize" data-resize="auto">
+										<button data-toggle="dropdown" class="btn dropdown-toggle">
+											<span class="dropdown-label"></span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li data-value="5" data-selected="true"><a href="#">5</a></li>
+											<li data-value="10"><a href="#">10</a></li>
+											<li data-value="20"><a href="#">20</a></li>
+											<li data-value="50"><a href="#">50</a></li>
+											<li data-value="100"><a href="#">100</a></li>
+										</ul>
+									</div>
+									<span>Per Page</span>
+								</div>
+							</div>
+							<div class="datagrid-footer-right" style="display:none;">
+								<div class="grid-pager">
+									<button type="button" class="btn grid-prevpage"><i class="icon-chevron-left"></i></button>
+									<span>Page</span>
+
+									<div class="input-append dropdown combobox">
+										<input class="span1" type="text">
+										<button class="btn" data-toggle="dropdown"><i class="caret"></i></button>
+										<ul class="dropdown-menu"></ul>
+									</div>
+									<span>of <span class="grid-pages"></span></span>
+									<button type="button" class="btn grid-nextpage"><i class="icon-chevron-right"></i></button>
+								</div>
+							</div>
+						</th>
+					</tr>
+					</tfoot>
+				</table>
+			</div>
+
 		</div>
 	</div>
 

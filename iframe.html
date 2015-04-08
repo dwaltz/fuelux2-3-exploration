@@ -5,6 +5,11 @@
 	<title>Fuel UX 3</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!--
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="bower_components/fuelux-2.6.4/dist/css/fuelux.css" rel="stylesheet" type="text/css">
+	-->
+
 	<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="bower_components/fuelux/dist/css/fuelux.css" rel="stylesheet" type="text/css">
 
@@ -25,17 +30,26 @@
 				paths: {
 					jquery: 'bower_components/jquery/jquery',
 					underscore: 'bower_components/underscore/underscore',
-					bootstrap: 'bower_components/bootstrap/dist/js/bootstrap'
+					bootstrap: 'bower_components/bootstrap/dist/js/bootstrap',
+					fuelux: 'bower_components/fuelux/dist/js/fuelux',
+
+					bootstrap2: 'bower_components/bootstrap-2.3-2/js/',
+					fuelux2: 'bower_components/fuelux-2.6.4/dist/',
+					moment: 'bower_components/moment/moment'
 				},
 				shim: {
 					'bootstrap': {
 						deps: ['jquery'],
 						exports: 'bootstrap'
+					},
+
+					'fuelux2/loader': {
+						deps: ['jquery']
 					}
 				}
 			});
 		})();
-		require(['index'], function($){ });
+		require(['iframe'], function($){ });
 	</script>
 </head>
 <body>
