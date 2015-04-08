@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="fuelux">
+<head>
+	<meta charset="utf-8">
+	<title>Fuel UX 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="bower_components/fuelux-2.6.4/dist/css/fuelux.css" rel="stylesheet" type="text/css">
+
+	<!--
+	<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="bower_components/fuelux/dist/css/fuelux.css" rel="stylesheet" type="text/css">
+	-->
+
+	<!-- allows for visual check of compiled LESS for debugging/testing purposes. Uncomment this, and comment out client-side LESS compilation code below to use this -->
+	<!--<link href="dist/css/fuelux.css" rel="stylesheet" type="text/css">-->
+	<!--<link href="dist/css/fuelux.min.css" rel="stylesheet" type="text/css">-->
+	<link href="index.css" rel="stylesheet" type="text/css">
+
+	<script src="bower_components/requirejs/require.js"></script>
+	<script type="text/javascript">
+		(function () {
+			requirejs.config({
+				config: {
+					moment: {
+						noGlobal: true
+					}
+				},
+				paths: {
+					jquery: 'bower_components/jquery/jquery',
+					underscore: 'bower_components/underscore/underscore',
+					bootstrap: 'bower_components/bootstrap/dist/js/bootstrap',
+					fuelux: 'bower_components/fuelux/dist/js/fuelux',
+
+					bootstrap2: 'bower_components/bootstrap-2.3-2/js/',
+					fuelux2: 'bower_components/fuelux-2.6.4/dist/',
+					moment: 'bower_components/moment/moment'
+				},
+				shim: {
+					'bootstrap': {
+						deps: ['jquery'],
+						exports: 'bootstrap'
+					},
+
+					'fuelux2/loader': {
+						deps: ['jquery']
+					}
+				}
+			});
+		})();
+		require(['iframeTree'], function($){ });
+	</script>
+</head>
+<body style="padding:0;">
+
+	<!-- FUELUX V2 TREE -->
+	<div id="ex-tree" class="tree"  style="width: 400px;height: 300px; margin: 20px;">
+		<div class="tree-folder" style="display:none;">
+			<div class="tree-folder-header">
+				<i class="icon-folder-close"></i>
+
+				<div class="tree-folder-name"></div>
+			</div>
+			<div class="tree-folder-content"></div>
+			<div class="tree-loader" style="display:none">
+			</div>
+		</div>
+		<div class="tree-item" style="display:none;">
+			<i class="tree-dot"></i>
+
+			<div class="tree-item-name"></div>
+		</div>
+	</div>
+
+</body>
